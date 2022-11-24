@@ -17,3 +17,19 @@
   width: 40px;
   padding: 20px;
 }
+
+.continent-map {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.continent-map img {
+  width: 300px;
+}
+
+.continent-map h1 {
+  padding-top: 50px;
+}

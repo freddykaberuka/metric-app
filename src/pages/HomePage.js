@@ -2,6 +2,7 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { GetCountryList } from '../redux/countries/Country';
+import euro from '../assets/european.png';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,10 @@ const HomePage = () => {
   }, []);
   return (
     <div>
-      <h1>home</h1>
+      <div className="continent-map">
+        <img src={euro} alt="" />
+        <h1>EUROPE</h1>
+      </div>
       {Countries.map((country) => (
         <>
           <p key={country.id}>
