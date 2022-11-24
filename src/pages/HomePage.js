@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { GetCountryList } from '../redux/countries/Country';
 import euro from '../assets/european.png';
 import direction from '../assets/direction.svg';
@@ -20,12 +21,14 @@ const HomePage = () => {
       <div className="country-container">
         {Countries.map((country) => (
           <div key={country.id} className="country-wrap">
-            <img src={country.flags.png} alt="map" />
-            <div className="country-text">
-              <div>{country.name.common}</div>
-              <div>{country.population}</div>
-              {console.log(country)}
-            </div>
+            <Link to="detail" state={{ state: country }}>
+              <img src={country.flags.png} alt="map" />
+              <div className="country-text">
+                <div>{country.name.common}</div>
+                <div>{country.population}</div>
+                {console.log(country)}
+              </div>
+            </Link>
           </div>
         ))}
       </div>
