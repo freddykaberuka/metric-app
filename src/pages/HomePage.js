@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { GetCountryList } from '../redux/countries/Country';
 import euro from '../assets/european.png';
 import direction from '../assets/direction.svg';
+import NavBar from '../component/NavBar';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const HomePage = () => {
   }, []);
   return (
     <div>
+      <NavBar />
       <div className="continent-map">
         <img src={euro} alt="" />
         <h1>EUROPE</h1>

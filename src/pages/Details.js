@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import BackNav from '../component/backNav';
 
 function Details() {
   const location = useLocation();
@@ -7,6 +8,7 @@ function Details() {
 
   return (
     <div>
+      <BackNav />
       <div className="continent-map">
         <img src={state.flags.png} alt="" />
         <h1>{state.name.common}</h1>

@@ -24,6 +24,8 @@ html {
 .nav-image img {
   width: 40px;
   padding: 20px;
+  color: #000;
+  fill: #000;
 }
 
 .stats h3 {
