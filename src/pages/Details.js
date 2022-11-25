@@ -8,10 +8,13 @@ function Details() {
   console.log(state, 'lokasiyo');
   return (
     <div>
-      <div className="country-map">
+      <div className="continent-map">
         <img src={state.flags.png} alt="" />
         <h1>{state.name.common}</h1>
       </div>
+      <hr />
+      <div className="stats"><h3>STATS BY COUNTRY</h3></div>
+      <hr />
       <div className="detail-container">
         <div className="detail-wrap">
           <div className="detail-name"><h3>Capital City</h3></div>
@@ -34,11 +37,14 @@ function Details() {
           </div>
         </div>
         <hr />
+
         <div className="detail-wrap">
-          <div className="detail-name"><h3>Currency</h3></div>
+          <div className="detail-name"><h3>Surface Area</h3></div>
           <div className="detail-desc">
             <h5>
-              {state.currencies.HRK.name}
+              {state.area}
+              {' '}
+              Km2
             </h5>
           </div>
         </div>

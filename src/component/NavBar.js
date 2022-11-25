@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../assets/micro.png';
 import image2 from '../assets/setting.png';
-import back from '../assets/back.svg';
+import menu from '../assets/menu.svg';
 
 function NavBar() {
   // eslint-disable-next-line no-unused-vars
@@ -20,7 +20,7 @@ function NavBar() {
   return (
     <div className="nav-container">
       <div className="nav-burger">
-        <img src={back} alt="" />
+        <img src={menu} alt="" />
         <h1>European Country</h1>
       </div>
       <div className="nav-image">

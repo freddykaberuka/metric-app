@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -18,16 +17,20 @@ const HomePage = () => {
         <img src={euro} alt="" />
         <h1>EUROPE</h1>
       </div>
+      <hr />
+      <div className="stats"><h3>STATS BY COUNTRY</h3></div>
+      <hr />
       <div className="country-container">
         {Countries.map((country) => (
           <div key={country.id} className="country-wrap">
             <Link to="detail" state={{ state: country }}>
               <img src={country.flags.png} alt="map" />
               <div className="country-text">
-                <div>{country.name.common}</div>
+                <div className="country-name">{country.name.common}</div>
                 <div>{country.population}</div>
                 {console.log(country)}
               </div>
+              <div className="direction"><img src={direction} alt="" /></div>
             </Link>
           </div>
         ))}
