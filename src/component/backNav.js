@@ -1,26 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image1 from '../assets/micro.png';
 import image2 from '../assets/setting.png';
-import menu from '../assets/menu.svg';
+import back from '../assets/backi.png';
 
-function NavBar() {
-  // eslint-disable-next-line no-unused-vars
-  const links = [
-    {
-      id: 1,
-      path: '/',
-      text: 'homepage',
-    },
-    {
-      id: 2,
-      path: '/detail',
-      text: 'details',
-    },
-  ];
+function BackNav() {
   return (
     <div className="nav-container">
       <div className="nav-burger">
-        <img src={menu} alt="" />
+        <Link to="/"><img src={back} alt="" /></Link>
         <h1>European Country</h1>
       </div>
       <div className="nav-image">
@@ -31,4 +19,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default BackNav;
