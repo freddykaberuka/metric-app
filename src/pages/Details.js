@@ -5,7 +5,6 @@ function Details() {
   const location = useLocation();
   const { state } = location.state;
 
-  console.log(state, 'lokasiyo');
   return (
     <div>
       <div className="continent-map">
